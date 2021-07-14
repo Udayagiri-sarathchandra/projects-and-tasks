@@ -1,0 +1,179 @@
+
+nav
+{background-image: linear-gradient(to right,skyblue,rgb(24, 24, 90),rgb(24, 24, 90),skyblue );
+    box-shadow:0px 0px 10px;
+    transition:box-shadow 1s;
+    
+    }
+  header 
+  {
+    position:sticky;
+    top:0px;
+    z-index: +5;
+  }  
+nav ul li { line-height: 90px; }
+
+nav a {   font-family:cursive ; font-weight: bolder; }
+
+nav li:hover { transform: scale(1.5);}
+
+
+.card img
+{
+   /* transform:rotate(2deg);*/
+height:250px;
+}
+
+#about-main p,  #Index-main p
+{
+    box-shadow:0px 0px 10px;
+    transition:box-shadow 1s;
+    font-weight: bolder;
+}
+
+iframe
+{
+    box-shadow:10px 10px 10px;
+   
+}
+
+figure:hover
+{
+    transform: scale(1.1);
+    transition-property:transform;
+    transition-duration:2s;   
+}
+
+iframe
+{
+    width:100%;
+}
+.bi-arrow-right-circle-fill
+{
+    color:blueviolet;
+}
+
+h1
+{
+  
+    box-shadow:0px 0px 10px;
+    transition:box-shadow 1s;
+    font-weight: bolder;
+    color:white;
+    /*background-image: linear-gradient(to bottom right,rgba(243, 231, 231, 1 ),rgb(1, 0, 8),rgb(1, 0, 8));*/
+    text-decoration:double;
+    line-height: 100px;
+    width:auto;
+}
+h4
+{
+    font-weight: bolder;
+}
+h3
+{
+
+    color:rgb(27, 27, 85);
+    font-family:cursive;
+    font-style: italic;
+    font-weight: bolder;
+}
+.pagination
+{
+    margin:20px 0px;
+  
+}
+
+.pagination .page-item
+{
+margin:0px 10px;
+font-size:25px;
+
+}
+
+.pagination .page-link
+{
+border-radius:20px;
+background-color:#6183b3;
+color:white;
+border:none;
+}
+
+.pagination .page-link:hover
+{
+    background-color:grey;
+}
+
+.carousel-item img
+{
+    height:750px;
+}
+
+body main 
+  {
+    
+    height:auto; 
+ background-color:floralwhite;
+ background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9)),url(images/Himalayas.jpg);
+  }
+   #Index-main 
+  {
+    background-image: linear-gradient(to bottom right,rgba(243, 231, 231, 0.5 ),rgb(1, 0, 0.5)),url(images/Himalayas.jpg);
+
+  }
+#about-main
+{
+   
+    background-image: (to bottom right,rgba(243, 231, 231, 1 ),rgb(1, 0, 8),rgb(1, 0, 8));
+}
+
+#Contact-main
+{
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.9)),/*linear-gradient(to bottom right,black,lightyellow,grey),*/url(images/Amber_Fort.jpg);
+}
+#contact-form
+{
+    background-image: linear-gradient(to bottom right, grey,lightyellow,black);
+}
+#Contact-main  .form-control:focus
+    {
+        box-shadow:0px 0px 10px blue;
+        transition:box-shadow 1s;
+    }
+
+ 
+/*footer*/
+.col_white_amrc { color:#FFF;}
+footer { width:100%; background-color:#263238; min-height:250px; padding:10px 0px 25px 0px ;}
+.pt2 { padding-top:40px ; margin-bottom:20px ;}
+footer p { font-size:13px; color:#CCC; padding-bottom:0px; margin-bottom:8px;}
+.mb10 { padding-bottom:15px ;}
+.footer_ul_amrc { margin:0px ; list-style-type:none ; font-size:14px; padding:0px 0px 10px 0px ; }
+.footer_ul_amrc li {padding:0px 0px 5px 0px;}
+.footer_ul_amrc li a{ color:#CCC;}
+.footer_ul_amrc li a:hover{ color:#fff; text-decoration:none;}
+.fleft { float:left;}
+.padding-right { padding-right:10px; }
+
+.footer_ul2_amrc {margin:0px; list-style-type:none; padding:0px;}
+.footer_ul2_amrc li p { display:table; }
+.footer_ul2_amrc li a:hover { text-decoration:none;}
+.footer_ul2_amrc li i { margin-top:5px;}
+
+.bottom_border { border-bottom:1px solid #323f45; padding-bottom:20px;}
+.foote_bottom_ul_amrc {
+	list-style-type:none;
+	padding:0px;
+	display:table;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+}
+.foote_bottom_ul_amrc li { display:inline;}
+.foote_bottom_ul_amrc li a { color:#999; margin:0 12px;}
+
+.social_footer_ul { display:table; margin:15px auto 0 auto; list-style-type:none;  }
+.social_footer_ul li { padding-left:20px; padding-top:10px; float:left; }
+.social_footer_ul li a { color:#CCC; border:1px solid #CCC; padding:8px;border-radius:50%;}
+.social_footer_ul li i {  width:20px; height:20px; text-align:center;}
+footer {background-image: linear-gradient(to top,rgb(24, 24, 90),skyblue );}

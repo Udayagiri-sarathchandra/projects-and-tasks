@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script>
+        function myfun() {
+            var ptext = document.querySelector('p').innerText
+            var btntext = document.querySelector('button').innerText
+
+            //New Input Element
+            var InputElement = document.createElement('input')
+            InputElement.type = "text"
+
+            //Add/Display New Created Elements on HTML Document
+            document.body.appendChild(InputElement)
+
+            //add ptext to input_Element
+            InputElement.value = ptext
+
+            //Copy the text from Input
+            InputElement.select()
+
+            //takes copy of selected information from  ELEMENT
+            document.execCommand("copy")
+
+            //Remove Created Element
+            document.body.removeChild(InputElement)
+
+            if (btntext == "Copy") {
+                document.querySelector('button').innerText = "Copied"
+            }
+        }
+
+    </script>
+</head>
+
+<body class="container p-5 bg-secondary h6">
+    <h2 class="text-center text-light">Copy-ClipBoard Task</h2>
+    <div>
+
+        <p class="border p-3 bg-light h6">
+            <button onclick="myfun()" class="mb-2">Copy</button><br>
+            &lt;head&gt;<br>
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br><br>
+            &lt;style&gt;<br>
+            #more {display: none;}<br>
+            &lt;/style&gt;<br><br>
+            &lt;/head&gt;<br><br>
+
+            &lt;body&gt;<br>
+
+            &lt;h2&gt;Read More Read Less Button&lt;/h2&gt;<br>
+            &lt;p&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex recusandae consequatur dignissimos
+            cumque neque. Libero corporis repudiandae ab eligendi ex laboriosam nemo, inventore qui accusantium aut eos
+            reprehenderit necessitatibus odit.&lt;/p&gt;<br>
+            &lt;button onclick="myFunction()" id="myBtn"&gt;Read more&lt;/button&gt;<br>
+
+            &lt;script&gt;<br>
+            function myFunction() {<br>
+            var dots = document.getElementById("dots");<br>
+            var moreText = document.getElementById("more");<br>
+            var btnText = document.getElementById("myBtn");<br>
+
+            if (dots.style.display === "none") {<br>
+            dots.style.display = "inline";<br>
+            btnText.innerHTML = "Read more";<br>
+            moreText.style.display = "none";<br>
+            } else {<br>
+            dots.style.display = "none";<br>
+            btnText.innerHTML = "Read less";<br>
+            moreText.style.display = "inline";<br>
+            }<br>
+            }<br>
+            &lt;/script&gt;<br>
+
+            &lt;/body&gt;<br>
+
+        </p>
+
+
+    </div>
+</body>
+
+</html>

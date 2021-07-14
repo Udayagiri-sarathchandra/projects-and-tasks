@@ -1,0 +1,13 @@
+/* figure
+{
+  box-shadow:0px 0px 15px;
+  transition:box-shadow 1s;
+} */
+.logodesign {
+    /* font-size: 25px; */
+     display: flex; 
+     /* align-items: center; 
+     justify-content: center;  */
+    border:5px dashed grey;
+}
+

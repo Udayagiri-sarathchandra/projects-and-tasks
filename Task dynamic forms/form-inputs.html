@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form inputs html</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- <script src="fom-inputs.js"></script> -->
+    <style>
+        button {
+            width: 75%;
+            border-radius: 50%;
+            color: cornsilk;
+            background: rgb(11, 1, 41);
+            height: 75px;
+        }
+
+        #frm {
+            display: block;
+        }
+
+        .xyz {
+            width: 75%;
+            height: 50px;
+            text-align: center;
+            border-radius: 5%;
+            border: solid 4px rgb(1, 1, 14);
+        }
+
+        #first,
+        #Second,
+        #Third {
+            display: none;
+        }
+
+        #Fourth {
+            display: none;
+            height: 100px;
+        }
+
+        #fifth {
+            display: none;
+            height: 100px;
+        }
+
+
+
+        .bi-x-circle {
+            display: none;
+            color: brown;
+            font-size: 50px;
+        }
+
+        #reset {
+            width: 100%;
+            border-radius: 20%;
+            color: cornsilk;
+            background: rgb(13, 13, 14);
+        }
+
+        span {
+            display: inline;
+        }
+
+        .rad {
+            display: inline;
+        }
+    </style>
+
+    <script>
+
+        myFunction = () => {
+            var name = document.getElementById("first");
+            var nameicon = document.getElementsByClassName("bi bi-x-circle");
+            name.style.display = "block"
+            nameicon[0].style.display = "block"
+        }
+        ifun = () => {
+            var name = document.getElementById("first");
+            var nameicon = document.getElementsByClassName("bi bi-x-circle");
+            name.style.display = "none"
+            nameicon[0].style.display = "none"
+        }
+        myFunction2 = () => {
+            var pwd = document.getElementById("Second");
+            document.getElementsByClassName("bi bi-x-circle")[1].style.display = "block"
+            pwd.style.display = "block"
+        }
+        ifun2 = () => {
+            var pwd = document.getElementById("Second");
+            document.getElementsByClassName("bi bi-x-circle")[1].style.display = "none"
+            pwd.style.display = "none"
+        }
+        myFunction3 = () => {
+            var pwd = document.getElementById("Third");
+            document.getElementsByClassName("bi bi-x-circle")[2].style.display = "block"
+            pwd.style.display = "block"
+        }
+        ifun3 = () => {
+            var pwd = document.getElementById("Third");
+            document.getElementsByClassName("bi bi-x-circle")[2].style.display = "none"
+            pwd.style.display = "none"
+        }
+        myFunction4 = () => {
+            var pwd = document.getElementById("Fourth");
+            document.getElementsByClassName("bi bi-x-circle")[3].style.display = "block"
+            pwd.style.display = "block"
+        }
+        ifun4 = () => {
+            var pwd = document.getElementById("Fourth");
+            document.getElementsByClassName("bi bi-x-circle")[3].style.display = "none"
+            pwd.style.display = "none"
+        }
+        myFunction5 = () => {
+            var pwd = document.getElementById("fifth");
+            document.getElementsByClassName("bi bi-x-circle")[4].style.display = "inline"
+            pwd.style.display = "block"
+        }
+        ifun5 = () => {
+            var pwd = document.getElementById("fifth");
+            document.getElementsByClassName("bi bi-x-circle")[4].style.display = "none"
+            pwd.style.display = "none"
+        }
+        myFun = () => {
+            document.getElementById("myForm").reset();
+        }
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-lg-3 bg-success p-5">
+                <button onclick="myFunction()" class="mx-5">Name</button> <br></br>
+                <button onclick="myFunction2()" class="mx-5">Password</button> <br></br>
+                <button onclick="myFunction3()" class="mx-5">Email</button> <br></br>
+                <button onclick="myFunction4()" class="mx-5">Message</button> <br></br>
+                <button onclick="myFunction5()" class="mx-5">Radio</button> <br></br>
+                <button type="button" onclick="myFun()" id="reset">Reset</button>
+            </div>
+            <div class="col-lg-8 bg-secondary p-5">
+                <form id="myForm">
+                    <span> <input type="text" id="first" placeholder="Full name" class="xyz"></input><i
+                            class="bi bi-x-circle" onclick="ifun()" id="icon1"></i></span>
+                    <input type="password" id="Second" placeholder="Password" class="xyz"></input><i
+                        class="bi bi-x-circle" onclick="ifun2()" id="i"></i>
+                    <input type="mail" id="Third" placeholder="sath94@gmail.com" class="xyz"></input><i
+                        class="bi bi-x-circle" onclick="ifun3()" id="icon3"></i>
+                    <input type="textarea" id="Fourth" placeholder="Enter some message" class="xyz"></input><i
+                        class="bi bi-x-circle" onclick="ifun4()" id="icon4"></i>
+                    <div id="fifth">
+                        <input type="radio" class="rad" name="t">type1
+                        <input type="radio" class="rad" name="t">type2
+                        <input type="radio" class="rad" name="t">type3
+                        <i class="bi bi-x-circle" onclick="ifun5()" id="icon4"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        textarea {
+            width: 40%;
+            height: 300px;
+        }
+    </style>
+
+    <script>
+        function myfun() {
+
+            //target uname Input Element 
+            var inputDOM = document.getElementById('uname')
+
+            //target meter Element 
+            var meterDOM = document.getElementById('meterElement')
+
+
+
+            var maxCharacters = 200
+
+            //target b Element
+            var boldTagDOM = document.getElementById('unameMsg')
+
+            //initialize the input value to bold Tag 
+            boldTagDOM.innerText = maxCharacters - inputDOM.value.length//200-Your Requestf
+
+            //update meter element value from Begining...
+            meterDOM.value = inputDOM.value.length
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <label for="">Enter Message</label> <br /><br />
+    <textarea maxlength="200" id="uname" onkeyup="myfun()"></textarea> <br>
+    Remaining Left Character's:<b id="unameMsg">200</b> <br><br>
+
+    <meter id="meterElement" style="width:40%;height:30px;" min="0" max="200"></meter>
+
+
+</body>
+
+</html>
