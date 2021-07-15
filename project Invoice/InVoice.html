@@ -10,6 +10,18 @@
     <link rel="stylesheet" href="InVoice.css">
     <link rel="stylesheet" href="font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+     <script>
+        var a = document.getElementById("imgupload")
+        function readUrl(input) {
+            if (input.files) {
+                var reader = new FileReader();
+                reader.readAsDataURL(input.files[0]);
+                reader.onload = function (e) {
+                    a.src = e.target.result;
+                }
+            }
+        }
+    </script>
 
     <script>
 
@@ -105,8 +117,10 @@
                         </div>
                         <div class="col-lg-4 col-md-6 logodesign">
 
-                            <img src="http://placehold.it/180" id="imgupload" alt=""></img>
-                            <input type="file" onChange="readUrl(this)"></input>
+                            <img src="https://placehold.co/300" class="src" id="image" ><br><br>
+
+                            <input type="file" onchange="inputt(event)">
+
 
                         </div>
 
