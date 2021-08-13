@@ -23,7 +23,10 @@ header {
  background-attachment: fixed;
 }
 
+nav .nav-link:hover{
+  background-color: yellow;
 
+}
 
 #About-Main {
   background-image: url(images/abcd.gif);

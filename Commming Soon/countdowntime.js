@@ -1,6 +1,6 @@
 function commingsoonpage() {
     // Set the date we're counting down to
-    var countDownDate = new Date("july 03, 2021 10:34:00").getTime();
+    var countDownDate = new Date("july 26, 2021 10:34:00").getTime();
 
 
     // Update the count down every 1 second
