@@ -10,18 +10,21 @@
     <link rel="stylesheet" href="InVoice.css">
     <link rel="stylesheet" href="font/bootstrap-icons.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
     <script>
-        var a = document.getElementById("imgupload")
-        function readUrl(input) {
-            if (input.files) {
-                var reader = new FileReader();
-                reader.readAsDataURL(input.files[0]);
-                reader.onload = function (e) {
-                    a.src = e.target.result;
-                }
+
+        function inputt(event) {
+            var output = document.getElementById('image');
+            var filereader = new FileReader();
+            filereader.onload = function () {
+
+                output.src = filereader.result;
             }
+            filereader.readAsDataURL(event.target.files[0]);
+
         }
     </script>
+
 
     <script>
 
@@ -34,7 +37,19 @@
             var result1 = qty1 * rate1;
             amt1 = result1;
 
+            // var sbtot = result1
+            // var totalSalary = 0;
+            // for (var i = 0; i < sbtot.length; i++) {
+            //     totalSalary += sbtot[i]
+            // }
+            document.getElementById("subtot").innerHTML = result1;
+
         }
+
+        // sub = () => {
+        //     var sbtot = [amt1, amt2, amt3, amt4, amt5, amt6, amt7, amt8]
+
+        // }
 
 
         var rownum = 1
@@ -42,7 +57,7 @@
             rownum += 1
             para = document.createElement("div");
             para.innerHTML =
-                ` <div class="row my-3" id="calculation">
+                ` <div class="row calcul my-3" id="calculation${rownum}">
                     <div class="col-lg-3">
                         <input type="text" class="form-control" placeholder="Item Name" aria-label="First name">
                         <div class="input-group">
@@ -65,18 +80,56 @@
                             onInput="calc1(${rownum})">
                     </div>
                     <div class="col-lg-2">
-                        <input type="text" class="form-control" placeholder=" Amount" aria-label="Last name" id="amt${rownum}">
+                        <input type="text" class="form-control amtcount" placeholder=" Amount" aria-label="Last name" id="amt${rownum}" onInput="calc1(${rownum})">
                     </div>
-                    <div class="form-check col-lg-1">
-                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                    </div>
-                </div>
-                                        `;
+                        <div class="col-lg-1">
+                    <i class="bi bi-dash-circle" onclick="remv()"></i>
+                       </div>`;
             document.getElementById("details").appendChild(para);
+            //  onclick="remv(${rownum})"                                                                                                                                
+        }
 
+
+        const amounts = []
+        //*****************************************************************************************************************************************//
+        // var rown = 1
+        // function remv() {
+        //     rown += 1
+        //     document.getElementsById("del").onClick = document.getElementById(`calculation${rown}`).removeChild(para);
+
+        // var name = document.getElementsByClassName("calcul");
+        // var nameicon = document.getElementsByClassName("bi bi-dash-circle");
+        // name.style.display = "none"
+        // nameicon[0].style.display = "none"
+        // }
+        // function remv() {
+        //     document.getElementById("details").appendChild(para);
+        //*****************************************************************************************************************************************//
+        //     $(function () {
+
+        //         $("#details").input(function (event) {
+        //             var total = 0;
+        //             $("#details .calcul").each(function () {
+        //                 var qty = parseInt($(this).find(".quantity").val());
+        //                 var rate = parseInt($(this).find(".rate").val());
+        //                 var subtotal = qty * rate;
+        //                 $(this).find(".subtotal").val(subtotal);
+        //                 if (!isNaN(subtotal))
+        //                     total += subtotal;
+        //             });
+        //             $("#total").html(total);
+        //         });
+
+        //     })
+        // }
+        //*****************************************************************************************************************************************//
+        deleeet = 1
+        function remv() {
+            deleeet += 1
+            var list = document.getElementById(`details`);
+            list.removeChild(list.childNodes[0]);
         }
     </script>
-
 
 </head>
 
@@ -101,9 +154,9 @@
 
             <figure class="row col-lg-9">
 
-                <div class="container border border-dark  bg-light ">
+                <div class="container-fluid border border-dark  bg-light ">
 
-                    <nav class="navbar navbar-expand-lg navbar-light border" id="abcd"></nav>
+                    <div class=" border" id="abcd"></div>
                     <br></br>
 
 
@@ -281,7 +334,7 @@
                             <th class="col-lg-2">HSN Code</th>
                             <th class="col-lg-2">Rate</th>
                             <th class="col-lg-2">Amount</th>
-                            <th class="col-lg-1 text-start">Tax</th>
+                            <th class="col-lg-1 text-start"></th>
                         </tr>
                     </table>
                     <!--table ends-->
@@ -289,7 +342,7 @@
 
 
                     <!--row 5-start-->
-                    <div class="row my-3" id="calculation">
+                    <div class="row my-3" id="calculation1">
 
                         <div class="col-lg-3">
                             <input type="text" class="form-control" placeholder="Item Name" aria-label="First name">
@@ -315,11 +368,11 @@
                         </div>
 
                         <div class="col-lg-2">
-                            <input type="text" class="form-control" placeholder=" Amount" aria-label="Last name"
-                                id="amt1">
+                            <input type="text" class="form-control amtcount" placeholder=" Amount"
+                                aria-label="Last name" id="amt1">
                         </div>
                         <div class="form-check col-lg-1">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <!-- <i class="bi bi-dash-circle" onclick="remv()"></i> -->
                         </div>
 
                     </div>
@@ -333,7 +386,7 @@
 
 
                     <p class="cl4"> <i class="bi bi-plus-square" onclick="myFun()"></i> <b>Add More</b></p>
-
+                    <!-- <i class="bi bi-dash-circle" onclick="remv()"></i><b>delete one</b> -->
                     <hr class="divider margin">
 
                     <!--***************************************************************************-->
